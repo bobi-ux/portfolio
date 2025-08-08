@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shreya Midya | Portfolio</title>
+  
+  
+  <link rel="stylesheet" href="style.css" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="hero" id="home" data-aos="fade-in">
+    <div class="hero-content">
+      <h1 data-aos="zoom-in" data-aos-delay="100">Hi, I’m Shreya Midya</h1>
+      <h1 class="typing-text"></h1>
+      <p data-aos="fade-up" data-aos-delay="300">Aspiring Web Developer</p>
+      <a href="#contact" class="btn" data-aos="fade-up" data-aos-delay="500">Contact Me</a>
+    </div>
+  </div>
+  <section id="about" class="section" data-aos="fade-up">
+    <h2>About Me</h2>
+    <p>I’m a B.Tech student passionate about web development, programming, and creative problem-solving.</p>
+  </section>
+
+  <section id="portfolio" class="section" data-aos="zoom-in">
+    <h2>My Portfolio</h2>
+    <div class="portfolio-item">
+      <img src="laptop.jpeg" alt="Project Image" data-aos="fade-up" data-aos-delay="200">
+      <p data-aos="fade-up" data-aos-delay="400">C++ Programming Project</p>
+    </div>
+  </section>
+  <section id="contact" class="section contact-section" data-aos="fade-up">
+    <h2>Contact Me</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required data-aos="fade-right">
+      <input type="email" placeholder="Email" required data-aos="fade-right" data-aos-delay="200">
+      <textarea placeholder="Your Message" required data-aos="fade-right" data-aos-delay="400"></textarea>
+      <button type="submit" data-aos="fade-up" data-aos-delay="600">Send</button>
+    </form>
+  </section>
+  <footer>
+    <p>© 2025 Shreya Midya</p>
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-github"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  </script>
+  <script>
+    const textElement = document.querySelector('.typing-text');
+    const text = "Welcome to my Portfolio";
+    let index = 0;
+
+    function type() {
+      if (index < text.length) {
+        textElement.textContent += text.charAt(index);
+        index++;
+        setTimeout(type, 100);
+      }
+    }
+
+    type();
+  </script>
+
+</body>
+</html>
